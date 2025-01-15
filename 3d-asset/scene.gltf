@@ -1,0 +1,244 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 192,
+            "type": "VEC3",
+            "max": [
+                1.9006562232971191,
+                0.6260747313499451,
+                0.8050104379653931
+            ],
+            "min": [
+                -1.3133423328399658,
+                0.2088288813829422,
+                -2.378164768218994
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 192,
+            "type": "VEC3",
+            "max": [
+                0.9018301963806152,
+                0.9953663349151611,
+                0.827121913433075
+            ],
+            "min": [
+                -0.7861709594726563,
+                0.12763452529907227,
+                -0.8076565265655518
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 192,
+            "type": "VEC2",
+            "max": [
+                0.9854369163513184,
+                0.9854369163513184
+            ],
+            "min": [
+                0.014563106931746006,
+                0.01456308364868164
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 288,
+            "type": "SCALAR",
+            "max": [
+                191
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 7296,
+            "uri": "bendfurndouble_0.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 2304,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 2304,
+            "byteLength": 2304,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 4608,
+            "byteLength": 1536,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6144,
+            "byteLength": 1152,
+            "target": 34963
+        }
+    ],
+    "images": [
+        {
+            "uri": "textures/image_0.png"
+        }
+    ],
+    "materials": [
+        {
+            "name": "Material.001",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.7018181681632996
+            },
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "meshes[0]",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "bendfurndouble",
+            "children": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "name": "Light",
+            "matrix": [
+                -0.2908647358417511,
+                -0.055189065635204315,
+                -0.9551712274551392,
+                0.0,
+                0.566393256187439,
+                0.7946722507476807,
+                -0.21839122474193573,
+                0.0,
+                0.7711008787155151,
+                -0.6045247912406921,
+                -0.19988344609737396,
+                0.0,
+                4.076245307922363,
+                5.903861999511719,
+                -1.0054539442062378,
+                1.0
+            ],
+            "extras": {
+                "name": "Light"
+            }
+        },
+        {
+            "name": "Camera",
+            "matrix": [
+                0.6859206557273865,
+                -4.011331711240018e-9,
+                -0.7276763319969177,
+                0.0,
+                0.6515582203865051,
+                0.44527140259742737,
+                0.6141703724861145,
+                0.0,
+                0.32401347160339355,
+                -0.8953956365585327,
+                0.3054208755493164,
+                0.0,
+                7.358891487121582,
+                4.958309173583984,
+                6.925790786743164,
+                1.0
+            ],
+            "extras": {
+                "name": "Camera"
+            }
+        },
+        {
+            "name": "Plane",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -0.23343122005462646,
+                -0.1292312741279602,
+                0.8198560476303101,
+                1.0
+            ],
+            "mesh": 0,
+            "extras": {
+                "name": "Plane"
+            }
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "source": 0,
+            "sampler": 0
+        }
+    ],
+    "scene": 0
+}
