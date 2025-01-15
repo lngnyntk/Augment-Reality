@@ -43,7 +43,30 @@
       smoothThreshold="5"
     >
       <a-entity
-        gltf-model="assets/scene.gltf"
+        gltf-model="3d-asset/scene.gltf"
+        position="15 30 -10"
+      >
+      </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true; precision: medium;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+    <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+    <a-nft
+      type="nft"
+      url="image-test/trex"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      <a-entity
+        gltf-model="3d-asset/scene.gltf"
         position="15 30 -10"
       >
       </a-entity>
