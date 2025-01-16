@@ -3,21 +3,57 @@
 
 <style>
   .arjs-loader {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    -webkit-mask: repeating-radial-gradient(farthest-side at bottom ,#0000 0,#000 1px 12%,#0000 calc(12% + 1px) 20%);
-    background:
-    radial-gradient(farthest-side at bottom,#514b82 0 95%,#0000 0) bottom/0% 0% no-repeat
-   #ddd;
-    animation: l10 2s infinite steps(6);
-
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
-  @keyframes l10 {
-      100% {background-size:120% 120%}
-   }
+  .arjs-loader:before,
+  .arjs-loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+  }
+  .arjs-loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #fff;
+    animation-name: pulsIn;
+  }
+  .arjs-loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #fff;
+  }
+
+  @keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 #fff;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 #fff;
+      opacity: 0;
+    }
+    100% {
+      box-shadow: 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+  }
+      
 </style>
 
 <body style="margin : 1px, 1px, 1px, 1px; overflow: hidden;">
@@ -41,6 +77,22 @@
     >
       <a-entity
         gltf-model ="assets/trex-model/scene.gltf"
+        scale="5 5 5"
+        position="150 300 -100"
+      >
+      </a-entity>
+    </a-nft>
+    <!--Another NFT-->
+    <a-nft
+      type="nft"
+      url="assets/bush-model/image/gorda"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      <a-entity
+        gltf-model="assets/bush-model/scene.gltf"
         scale="5 5 5"
         position="150 300 -100"
       >
