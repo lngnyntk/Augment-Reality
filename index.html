@@ -17,22 +17,16 @@
    #ddd;
     animation: l10 2s infinite steps(6);
 
-    @keyframes l10 {
+  }
+  @keyframes l10 {
       100% {background-size:120% 120%}
-  }
-  }
-
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
+   }
 </style>
 
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader"></div>
-  <!--1 Scene-->
+  <!--One Container-->
   <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true; precision: medium;"
@@ -42,15 +36,15 @@
     <!-- NFT 1 -->
     <a-nft
       type="nft"
-      url="ar-one/image/trex"
+      url="assets/trex-model/image/trex"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
     >
       <a-entity
-        gltf-model ="ar-one/scene.gltf"
-        scale="50 50 50"
+        gltf-model ="assets/trex-model/scene.gltf"
+        scale="5 5 5"
         position="150 300 -100"
       >
       </a-entity>
@@ -58,15 +52,15 @@
     <!--Another NFT-->
     <a-nft
       type="nft"
-      url="ar-two/image/gorda"
+      url="assets/bush-model/image/gorda"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
     >
       <a-entity
-        gltf-model="ar-two/scene.gltf"
-        scale="50 50 50"
+        gltf-model="assets/bush-model/scene.gltf"
+        scale="5 5 5"
         position="150 300 -100"
       >
       </a-entity>
