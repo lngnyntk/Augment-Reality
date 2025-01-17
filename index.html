@@ -57,7 +57,7 @@
       
 </style>
 
-<body style="margin : 1px, 1px, 1px, 1px; overflow: hidden;">
+<body>
   <!-- minimal loader shown until image descriptors are loaded -->
   <!--One Container-->
   <div class="arjs-loader"></div>
@@ -159,6 +159,22 @@
     >
       <a-entity
         gltf-model="assets/moon-model/moon.gltf"
+        scale="5 5 5"
+        position="150 300 -100"
+      >
+      </a-entity>
+    </a-nft>
+    <!--Another NFT-->
+    <a-nft
+      type="nft"
+      url="assets/ace-model/image/logo"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+      <a-entity
+        gltf-model="assets/ace-model/result.gltf"
         scale="5 5 5"
         position="150 300 -100"
       >
