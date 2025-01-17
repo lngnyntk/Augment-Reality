@@ -1,5 +1,6 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.6.0/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 
 <style>
   .arjs-loader {
@@ -55,18 +56,21 @@
     }
   }
       
+      
 </style>
 
-<body>
+<body style="margin: 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <!--One Container-->
   <div class="arjs-loader"></div>
   <a-scene
-  loading-screen="dotsColor: red; backgroundColor: black"
+    loading-screen="dotsColor: red; backgroundColor: black"
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true; precision: medium;"
     embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;"
+    gesture-detector
+    id="scene"
   >
     <!-- NFT 1 -->
     <a-nft
@@ -156,11 +160,18 @@
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;"
     >
       <a-entity
         gltf-model="assets/moon-model/moon.gltf"
         scale="5 5 5"
         position="150 300 -100"
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;"
+        class="clickable"
+        gesture-handler="minScale: 0.25; maxScale: 10"
       >
       </a-entity>
     </a-nft>
