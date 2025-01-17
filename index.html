@@ -80,11 +80,16 @@
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;"
     >
       <a-entity
         gltf-model ="assets/trex-model/scene.gltf"
         scale="5 5 5"
         position="0.5 0.5 0.5"
+        class="clickable"
+        gesture-handler="minScale: 0.25; maxScale: 10"
       >
       </a-entity>
     </a-nft>
@@ -123,7 +128,7 @@
     <!--Another NFT-->
     <a-nft
       type="nft"
-      url="assets/ace-model/image/logo"
+      url="assets/gorda-model/image/gorda"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
@@ -131,7 +136,7 @@
     >
       <a-entity
         gltf-model="assets/gorda-model/scene.gltf"
-        scale="5 5 5"
+        scale="0.5 0.5 0.5"
         position="0.5 0.5 0.5"
       >
       </a-entity>
@@ -178,16 +183,21 @@
     <!--Another NFT-->
     <a-nft
       type="nft"
-      url="assets/gorda-model/image/gorda"
+      url="assets/ace-model/image/ace"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;"
     >
       <a-entity
         gltf-model="assets/ace-model/result.gltf"
         scale="5 5 5"
-        position="150 300 -100"
+        position="150 300 0"
+        class="clickable"
+        gesture-handler="minScale: 0.25; maxScale: 10"
       >
       </a-entity>
     </a-nft>
